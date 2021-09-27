@@ -1,5 +1,8 @@
 ## The Kujenga Blockchain
 
-A decentralised blockchain by the African people, for the African people. Connecting us to the world.
+The first decentralised blockchain for the people of Africa.
+
+Kujenga, a Swahili word which means 'to build'
+
 
 This project is under development. Mainnet Q4 2021.
