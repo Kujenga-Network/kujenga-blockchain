@@ -1,3 +1,6 @@
 [submodule "kujenga-blockchain-gui"]
 	path = kujenga-blockchain-gui
 	url = https://github.com/Kujenga-Network/kujenga-blockchain-gui
+[submodule "mozilla-ca"]
+	path = mozilla-ca
+	url = https://github.com/Kujenga-Network/mozilla-ca
