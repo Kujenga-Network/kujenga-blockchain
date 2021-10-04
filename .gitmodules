@@ -1,0 +1,3 @@
+[submodule "kujenga-blockchain-gui"]
+	path = kujenga-blockchain-gui
+	url = https://github.com/Kujenga-Network/kujenga-blockchain-gui
