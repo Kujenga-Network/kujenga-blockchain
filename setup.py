@@ -47,9 +47,9 @@ dev_dependencies = [
 kwargs = dict(
     name="kujenga-blockchain",
     author="Mariano Sorgente",
-    author_email="mariano@kujenga.net",
+    author_email="mariano@kujenga.xyz",
     description="Kujenga blockchain full node, farmer, timelord, and wallet.",
-    url="https://kujenga.net/",
+    url="https://kujenga.xyz/",
     license="Apache License",
     python_requires=">=3.7, <4",
     keywords="kujenga blockchain node",

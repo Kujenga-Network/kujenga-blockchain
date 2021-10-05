@@ -1,6 +1,6 @@
 # kujenga-blockchain
 
-![Alt text](https://www.kujenga.net/img/kujenga_logo.svg)
+![Alt text](https://www.kujenga.xyz/img/kujenga_logo.svg)
 
 | Current Release/main | Development Branch/dev |
 |         :---:          |          :---:         |

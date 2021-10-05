@@ -93,8 +93,8 @@ def configure(
         if testnet == "true" or testnet == "t":
             print("Setting Testnet")
             testnet_port = "56776"
-            testnet_introducer = "beta1_introducer.kujenga.net"
-            testnet_dns_introducer = "dns-introducer-testnet7.kujenga.net"
+            testnet_introducer = "beta1_introducer.kujenga.xyz"
+            testnet_dns_introducer = "dns-introducer-testnet7.kujenga.xyz"
             testnet = "testnet7"
             config["full_node"]["port"] = int(testnet_port)
             config["full_node"]["introducer_peer"]["port"] = int(testnet_port)
@@ -120,8 +120,8 @@ def configure(
         elif testnet == "false" or testnet == "f":
             print("Setting Mainnet")
             mainnet_port = "6776"
-            mainnet_introducer = "introducer.kujenga.net"
-            mainnet_dns_introducer = "dns-introducer.kujenga.net"
+            mainnet_introducer = "introducer.kujenga.xyz"
+            mainnet_dns_introducer = "dns-introducer.kujenga.xyz"
             net = "mainnet"
             config["full_node"]["port"] = int(mainnet_port)
             config["full_node"]["introducer_peer"]["port"] = int(mainnet_port)
