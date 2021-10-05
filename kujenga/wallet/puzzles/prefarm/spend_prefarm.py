@@ -43,8 +43,8 @@ async def main() -> None:
         print(farmer_prefarm.amount, farmer_amounts)
         assert farmer_amounts == farmer_prefarm.amount // 2
         assert pool_amounts == pool_prefarm.amount // 2
-        address1 = "xkj1wkr954rpx3f3kl04zz3zgvlx5umldp52spleqycxgvtrn354epdsmlvwpf"  # Key 1
-        address2 = "xkj1wkr954rpx3f3kl04zz3zgvlx5umldp52spleqycxgvtrn354epdsmlvwpf"  # Key 2
+        address1 = "xkj1q4und4mv95gdfw2tct9ha039v6remyxjv5mmsdr8zwujl5nmztvqxelde9"  # Key 1
+        address2 = "xkj1t0sdtmq3p825vklxe3kywlv39g2exjnc80eky27eadxptz5vpfusc7tk8f"  # Key 2
 
         ph1 = decode_puzzle_hash(address1)
         ph2 = decode_puzzle_hash(address2)
@@ -58,8 +58,8 @@ async def main() -> None:
 
         print(f"Ph1: {ph1.hex()}")
         print(f"Ph2: {ph2.hex()}")
-        assert ph1.hex() == "75865a546134531b7df510a22433e6a737f6868a807f901306431639c695c85b"
-        assert ph2.hex() == "75865a546134531b7df510a22433e6a737f6868a807f901306431639c695c85b"
+        assert ph1.hex() == "057936d76c2d10d4b94bc2cb7ebe2566879d90d26537b8346713b92fd27b12d8"
+        assert ph2.hex() == "5be0d5ec1109d5465be6cc6c477d912a15934a783bf3622bd9eb4c158a8c0a79"
 
         p_solution = Program.to(binutils.assemble("()"))
 

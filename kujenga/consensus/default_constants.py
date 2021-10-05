@@ -10,7 +10,7 @@ testnet_kwargs = {
     "SUB_SLOT_ITERS_STARTING": 2 ** 27,
     # DIFFICULTY_STARTING is the starting difficulty for the first epoch, which is then further
     # multiplied by another factor of DIFFICULTY_CONSTANT_FACTOR, to be used in the VDF iter calculation formula.
-    "DIFFICULTY_CONSTANT_FACTOR": 2 ** 64,
+    "DIFFICULTY_CONSTANT_FACTOR": 2 ** 59,
     "DIFFICULTY_STARTING": 7,
     "DIFFICULTY_CHANGE_MAX_FACTOR": 3,  # The next difficulty is truncated to range [prev / FACTOR, prev * FACTOR]
     # These 3 constants must be changed at the same time
@@ -32,10 +32,10 @@ testnet_kwargs = {
     # Forks of kujenga should change this value to provide replay attack protection. This is set to mainnet genesis chall
     "AGG_SIG_ME_ADDITIONAL_DATA": bytes.fromhex("831d364a6c76b0c8b3a7ed244b4c8274dda6a6f0c8f1c09a3adbbed135e5c4b5"),
     "GENESIS_PRE_FARM_POOL_PUZZLE_HASH": bytes.fromhex(
-        "75865a546134531b7df510a22433e6a737f6868a807f901306431639c695c85b"
+        "057936d76c2d10d4b94bc2cb7ebe2566879d90d26537b8346713b92fd27b12d8"
     ),
     "GENESIS_PRE_FARM_FARMER_PUZZLE_HASH": bytes.fromhex(
-        "75865a546134531b7df510a22433e6a737f6868a807f901306431639c695c85b"
+        "5be0d5ec1109d5465be6cc6c477d912a15934a783bf3622bd9eb4c158a8c0a79"
     ),
     "MAX_VDF_WITNESS_SIZE": 64,
     # Size of mempool = 50x the size of block

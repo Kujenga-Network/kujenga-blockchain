@@ -8,8 +8,8 @@ from kujenga.util.bech32m import decode_puzzle_hash, encode_puzzle_hash
 from kujenga.util.condition_tools import parse_sexp_to_conditions
 from kujenga.util.ints import uint32
 
-address1 = "txkj1wkr954rpx3f3kl04zz3zgvlx5umldp52spleqycxgvtrn354epdsmlvwpf"
-address2 = "txkj1wkr954rpx3f3kl04zz3zgvlx5umldp52spleqycxgvtrn354epdsmlvwpf"  
+address1 = "txkj1q4und4mv95gdfw2tct9ha039v6remyxjv5mmsdr8zwujl5nmztvqxelde9"
+address2 = "txkj1t0sdtmq3p825vklxe3kywlv39g2exjnc80eky27eadxptz5vpfusc7tk8f"
 
 ph1 = decode_puzzle_hash(address1)
 ph2 = decode_puzzle_hash(address2)
