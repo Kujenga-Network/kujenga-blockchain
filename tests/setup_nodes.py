@@ -5,25 +5,25 @@ import signal
 from secrets import token_bytes
 from typing import Dict, List, Optional
 
-from chia.consensus.constants import ConsensusConstants
-from chia.daemon.server import WebSocketServer, create_server_for_daemon, daemon_launch_lock_path, singleton
-from chia.full_node.full_node_api import FullNodeAPI
-from chia.server.start_farmer import service_kwargs_for_farmer
-from chia.server.start_full_node import service_kwargs_for_full_node
-from chia.server.start_harvester import service_kwargs_for_harvester
-from chia.server.start_introducer import service_kwargs_for_introducer
-from chia.server.start_service import Service
-from chia.server.start_timelord import service_kwargs_for_timelord
-from chia.server.start_wallet import service_kwargs_for_wallet
-from chia.simulator.start_simulator import service_kwargs_for_full_node_simulator
-from chia.timelord.timelord_launcher import kill_processes, spawn_process
-from chia.types.peer_info import PeerInfo
-from chia.util.bech32m import encode_puzzle_hash
+from kujenga.consensus.constants import ConsensusConstants
+from kujenga.daemon.server import WebSocketServer, create_server_for_daemon, daemon_launch_lock_path, singleton
+from kujenga.full_node.full_node_api import FullNodeAPI
+from kujenga.server.start_farmer import service_kwargs_for_farmer
+from kujenga.server.start_full_node import service_kwargs_for_full_node
+from kujenga.server.start_harvester import service_kwargs_for_harvester
+from kujenga.server.start_introducer import service_kwargs_for_introducer
+from kujenga.server.start_service import Service
+from kujenga.server.start_timelord import service_kwargs_for_timelord
+from kujenga.server.start_wallet import service_kwargs_for_wallet
+from kujenga.simulator.start_simulator import service_kwargs_for_full_node_simulator
+from kujenga.timelord.timelord_launcher import kill_processes, spawn_process
+from kujenga.types.peer_info import PeerInfo
+from kujenga.util.bech32m import encode_puzzle_hash
 from tests.block_tools import create_block_tools, create_block_tools_async, test_constants
 from tests.util.keyring import TempKeyring
-from chia.util.hash import std_hash
-from chia.util.ints import uint16, uint32
-from chia.util.keychain import bytes_to_mnemonic
+from kujenga.util.hash import std_hash
+from kujenga.util.ints import uint16, uint32
+from kujenga.util.keychain import bytes_to_mnemonic
 from tests.time_out_assert import time_out_assert_custom_interval
 
 
@@ -217,10 +217,10 @@ async def setup_farmer(
     config = bt.config["farmer"]
     config_pool = bt.config["pool"]
 
-    config["xch_target_address"] = encode_puzzle_hash(b_tools.farmer_ph, "xch")
+    config["xkj_target_address"] = encode_puzzle_hash(b_tools.farmer_ph, "xkj")
     config["pool_public_keys"] = [bytes(pk).hex() for pk in b_tools.pool_pubkeys]
     config["port"] = port
-    config_pool["xch_target_address"] = encode_puzzle_hash(b_tools.pool_ph, "xch")
+    config_pool["xkj_target_address"] = encode_puzzle_hash(b_tools.pool_ph, "xkj")
 
     if full_node_port:
         config["full_node_peer"]["host"] = self_hostname
@@ -482,7 +482,7 @@ async def setup_full_system(
             setup_introducer(21233),
             setup_harvester(21234, 21235, consensus_constants, b_tools),
             setup_farmer(21235, consensus_constants, b_tools, uint16(21237)),
-            setup_vdf_clients(8000),
+            setup_vdf_clients(7924),
             setup_timelord(21236, 21237, False, consensus_constants, b_tools),
             setup_full_node(
                 consensus_constants, "blockchain_test.db", 21237, b_tools, 21233, False, 10, True, connect_to_daemon

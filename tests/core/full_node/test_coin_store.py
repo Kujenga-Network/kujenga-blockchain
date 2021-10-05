@@ -7,23 +7,23 @@ import aiosqlite
 import pytest
 import tempfile
 
-from chia.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from chia.consensus.blockchain import Blockchain, ReceiveBlockResult
-from chia.consensus.coinbase import create_farmer_coin, create_pool_coin
-from chia.full_node.block_store import BlockStore
-from chia.full_node.coin_store import CoinStore
-from chia.full_node.hint_store import HintStore
-from chia.full_node.mempool_check_conditions import get_name_puzzle_conditions
-from chia.types.blockchain_format.coin import Coin
-from chia.types.coin_record import CoinRecord
-from chia.types.full_block import FullBlock
-from chia.types.generator_types import BlockGenerator
-from chia.util.generator_tools import tx_removals_and_additions
-from chia.util.ints import uint64, uint32
+from kujenga.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from kujenga.consensus.blockchain import Blockchain, ReceiveBlockResult
+from kujenga.consensus.coinbase import create_farmer_coin, create_pool_coin
+from kujenga.full_node.block_store import BlockStore
+from kujenga.full_node.coin_store import CoinStore
+from kujenga.full_node.hint_store import HintStore
+from kujenga.full_node.mempool_check_conditions import get_name_puzzle_conditions
+from kujenga.types.blockchain_format.coin import Coin
+from kujenga.types.coin_record import CoinRecord
+from kujenga.types.full_block import FullBlock
+from kujenga.types.generator_types import BlockGenerator
+from kujenga.util.generator_tools import tx_removals_and_additions
+from kujenga.util.ints import uint64, uint32
 from tests.wallet_tools import WalletTool
-from chia.util.db_wrapper import DBWrapper
+from kujenga.util.db_wrapper import DBWrapper
 from tests.setup_nodes import bt, test_constants
-from chia.types.blockchain_format.sized_bytes import bytes32
+from kujenga.types.blockchain_format.sized_bytes import bytes32
 
 
 @pytest.fixture(scope="module")
