@@ -121,11 +121,8 @@ python -m pip install -e . --extra-index-url https://pypi.chia.net/simple/
 
 echo ""
 echo "Kujenga blockchain install.sh complete."
-echo "For assistance join us on Keybase in the #support chat channel:"
-echo "https://keybase.io/team/kujenga_network.public"
-echo ""
-echo "Try the Quick Start Guide to running kujenga-blockchain:"
-echo "https://github.com/Kujenga-Network/kujenga-blockchain/wiki/Quick-Start-Guide"
+echo "For assistance join us on Discord in the #support channel:"
+echo "https://discord.gg/K4gs2QBpyG"
 echo ""
 echo "To install the GUI type 'sh install-gui.sh' after '. ./activate'."
 echo ""

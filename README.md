@@ -1,11 +1,30 @@
 ## The Kujenga Network
 
-The first decentralised blockchain for the people of Africa.
+The first decentralised PoST blockchain in Africa!
 
-Kujenga, a Swahili word which means 'to build'.
+The kujenga network is based on the Chia PoST consensus mechanism. Our goal isn’t to innovate in terms of the codebase, but rather by using the kujenga network as a platform, we can promote crypto and on-ramp the people of Africa into the greater global crypto ecosystem.
 
-Mainnet to be announced - Q4 2021
+## Ubuntu Install
 
-## We have not launched yet!
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt install git -y
 
-Config will change so any attempts to farm now would just be a waste of your resources.  
+git clone https://github.com/Kujenga-Network/kujenga-blockchain --recurse-submodules
+
+#CLI:
+cd kujenga-blockchain
+sh install.sh
+. ./activate
+kujenga init
+
+#GUI:
+cd kujenga-blockchain
+sh install.sh
+. ./activate
+sh install-gui.sh
+cd kujenga-blockchain-gui
+npm run electron &
+
+
+Discord: https://discord.gg/K4gs2QBpyG

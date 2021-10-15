@@ -1,7 +1,7 @@
 from kujenga.util.ints import uint32, uint64
 
-# 1 Kujenga coin = 1,000,000,000,000 = 1 trillion dogo.
-_dogo_per_kujenga = 1000000000000
+# 1 Kujenga coin = 1,000,000,000,000 = 1 trillion moja.
+_moja_per_kujenga = 1000000000000
 _blocks_per_year = 1681920  # 32 * 6 * 24 * 365
 
 
@@ -15,19 +15,19 @@ def calculate_pool_reward(height: uint32) -> uint64:
     """
 
     if height == 0:
-        return uint64(int((7 / 8) * 2000000 * _dogo_per_kujenga))
-    elif height < 18432:
-        return uint64(int((7 / 8) * 0.001 * _dogo_per_kujenga))
+        return uint64(int((7 / 8) * 2000000 * _moja_per_kujenga))
+    elif height < 9216:
+        return uint64(int((7 / 8) * 0.001 * _moja_per_kujenga))
     elif height < 3 * _blocks_per_year:
-        return uint64(int((7 / 8) * 2 * _dogo_per_kujenga))
+        return uint64(int((7 / 8) * 2 * _moja_per_kujenga))
     elif height < 6 * _blocks_per_year:
-        return uint64(int((7 / 8) * 1 * _dogo_per_kujenga))
+        return uint64(int((7 / 8) * 1 * _moja_per_kujenga))
     elif height < 9 * _blocks_per_year:
-        return uint64(int((7 / 8) * 0.5 * _dogo_per_kujenga))
+        return uint64(int((7 / 8) * 0.5 * _moja_per_kujenga))
     elif height < 12 * _blocks_per_year:
-        return uint64(int((7 / 8) * 0.25 * _dogo_per_kujenga))
+        return uint64(int((7 / 8) * 0.25 * _moja_per_kujenga))
     else:
-        return uint64(int((7 / 8) * 0.125 * _dogo_per_kujenga))
+        return uint64(int((7 / 8) * 0.125 * _moja_per_kujenga))
 
 
 def calculate_base_farmer_reward(height: uint32) -> uint64:
@@ -40,16 +40,16 @@ def calculate_base_farmer_reward(height: uint32) -> uint64:
     rates increase continuously.
     """
     if height == 0:
-        return uint64(int((1 / 8) * 2000000 * _dogo_per_kujenga))
-    elif height < 18432:
-        return uint64(int((1 / 8) * 0.001 * _dogo_per_kujenga))
+        return uint64(int((1 / 8) * 2000000 * _moja_per_kujenga))
+    elif height < 9216:
+        return uint64(int((1 / 8) * 0.001 * _moja_per_kujenga))
     elif height < 3 * _blocks_per_year:
-        return uint64(int((1 / 8) * 2 * _dogo_per_kujenga))
+        return uint64(int((1 / 8) * 2 * _moja_per_kujenga))
     elif height < 6 * _blocks_per_year:
-        return uint64(int((1 / 8) * 1 * _dogo_per_kujenga))
+        return uint64(int((1 / 8) * 1 * _moja_per_kujenga))
     elif height < 9 * _blocks_per_year:
-        return uint64(int((1 / 8) * 0.5 * _dogo_per_kujenga))
+        return uint64(int((1 / 8) * 0.5 * _moja_per_kujenga))
     elif height < 12 * _blocks_per_year:
-        return uint64(int((1 / 8) * 0.25 * _dogo_per_kujenga))
+        return uint64(int((1 / 8) * 0.25 * _moja_per_kujenga))
     else:
-        return uint64(int((1 / 8) * 0.125 * _dogo_per_kujenga))
+        return uint64(int((1 / 8) * 0.125 * _moja_per_kujenga))

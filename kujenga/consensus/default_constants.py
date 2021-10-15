@@ -10,8 +10,8 @@ testnet_kwargs = {
     "SUB_SLOT_ITERS_STARTING": 2 ** 27,
     # DIFFICULTY_STARTING is the starting difficulty for the first epoch, which is then further
     # multiplied by another factor of DIFFICULTY_CONSTANT_FACTOR, to be used in the VDF iter calculation formula.
-    "DIFFICULTY_CONSTANT_FACTOR": 2 ** 59,
-    "DIFFICULTY_STARTING": 7,
+    "DIFFICULTY_CONSTANT_FACTOR": 2 ** 64,
+    "DIFFICULTY_STARTING": 4,
     "DIFFICULTY_CHANGE_MAX_FACTOR": 3,  # The next difficulty is truncated to range [prev / FACTOR, prev * FACTOR]
     # These 3 constants must be changed at the same time
     "SUB_EPOCH_BLOCKS": 384,  # The number of blocks per sub-epoch, mainnet 384
@@ -28,9 +28,9 @@ testnet_kwargs = {
     # Used as the initial cc rc challenges, as well as first block back pointers, and first SES back pointer
     # We override this value based on the chain being run (testnet0, testnet1, mainnet, etc)
     # Default used for tests is std_hash(b'')
-    "GENESIS_CHALLENGE": bytes.fromhex("db0f86124cef99fe0642345ce633efa1cea5ff27c24d88ee79e7e78e7924690f"),
+    "GENESIS_CHALLENGE": bytes.fromhex("cd2fc5f5f31fa924cf4ccd0950da415887a212c8dabcea52baca634f2011edbe"),
     # Forks of kujenga should change this value to provide replay attack protection. This is set to mainnet genesis chall
-    "AGG_SIG_ME_ADDITIONAL_DATA": bytes.fromhex("831d364a6c76b0c8b3a7ed244b4c8274dda6a6f0c8f1c09a3adbbed135e5c4b5"),
+    "AGG_SIG_ME_ADDITIONAL_DATA": bytes.fromhex("707cab3aede5efd4258e81e995009c5090cbed67f58770ee0d88e5b322471aa9"),
     "GENESIS_PRE_FARM_POOL_PUZZLE_HASH": bytes.fromhex(
         "057936d76c2d10d4b94bc2cb7ebe2566879d90d26537b8346713b92fd27b12d8"
     ),
