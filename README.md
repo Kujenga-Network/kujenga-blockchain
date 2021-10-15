@@ -10,20 +10,23 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt install git -y
 
-git clone https://github.com/Kujenga-Network/kujenga-blockchain --recurse-submodules
+git clone https://github.com/Kujenga-Network/kujenga-blockchain
 
-#CLI:
+## CLI:
 cd kujenga-blockchain
-sh install.sh
-. ./activate
-kujenga init
 
-#GUI:
+sh install.sh  
+. ./activate  
+kujenga init 
+
+## GUI:  
 cd kujenga-blockchain
-sh install.sh
-. ./activate
-sh install-gui.sh
-cd kujenga-blockchain-gui
+
+sh install.sh   
+. ./activate   
+sh install-gui.sh   
+cd kujenga-blockchain-gui   
+
 npm run electron &
 
 
